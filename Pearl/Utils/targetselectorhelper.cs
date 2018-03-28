@@ -11,7 +11,7 @@ namespace Pearl.Utils
         public static Player GetTarget(TargetingMode targetingMode, float worldDistance)
         {
             var enemies = EntitiesManager.EnemyTeam;
-            var player = EntitiesManager.LocalPlayer;
+            var player = LocalPlayer.Instance;
             var aliveEnemies = enemies.Where(e =>
                 !e.IsDead &&
                 e.Distance(LocalPlayer.Instance) <= worldDistance);
@@ -36,7 +36,7 @@ namespace Pearl.Utils
         public static Player GetAlly(TargetingMode targetingMode, float worldDistance)
         {
             var allies = EntitiesManager.LocalTeam;
-            var player = EntitiesManager.LocalPlayer;
+            var player = LocalPlayer.Instance;
             var aliveAlies = allies.Where(e => !e.IsDead && e.Distance(LocalPlayer.Instance) <= worldDistance && !Helper.IsColliding(player, e));
             switch (targetingMode)
             {

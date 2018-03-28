@@ -48,7 +48,7 @@ namespace Pearl.Utils
                 return default(Vector2);
             }
 
-            var difPos = EntitiesManager.LocalPlayer.WorldPosition - projectile.WorldPosition;
+            var difPos = LocalPlayer.Instance.WorldPosition - projectile.WorldPosition;
             return projectile.WorldPosition + (difPos / 2);
         }
     }

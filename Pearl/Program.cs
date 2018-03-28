@@ -19,14 +19,14 @@ namespace Pearl
         private static float drawDebug;
 
         private static SkillBase eSkill;
-        private static Player player;
+        private static Player player => LocalPlayer.Instance;
         private static bool enabled;
         private static bool useQ;
 
         public static Projectile GetEnemyProjectiles(float worldDistance)
         {
             return EntitiesManager.ActiveProjectiles?.FirstOrDefault(p =>
-                p?.TeamId != EntitiesManager.LocalPlayer?.TeamId && p.Distance(LocalPlayer.Instance) <= worldDistance);
+                p?.TeamId != player?.TeamId && p.Distance(LocalPlayer.Instance) <= worldDistance);
         }
 
        //TODO Maybe try to merge Heal Combo and Combo together
@@ -96,7 +96,6 @@ namespace Pearl
         {
             if (!Game.IsInGame) return;
             if (!enabled) return;
-            player = EntitiesManager.LocalPlayer;
 
             if (Input.GetKeyDown(KeyCode.X) && EntitiesManager.ActiveGameObjects != null) //EntitiesManager.ActiveObjects
             {
@@ -131,10 +130,9 @@ namespace Pearl
             };
             Game.Instance.OnMatchStart += delegate
             {
-                if (EntitiesManager.LocalPlayer?.CharName != Champion.Pearl.ToString())
+                if (player?.CharName != Champion.Pearl.ToString())
                     return;
-
-                player = EntitiesManager.LocalPlayer;
+                
                 enabled = true;
             };
 
