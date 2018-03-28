@@ -101,7 +101,7 @@ namespace Pearl
             if (Input.GetKeyDown(KeyCode.X) && EntitiesManager.ActiveGameObjects != null) //EntitiesManager.ActiveObjects
             {
                 foreach (var o in EntitiesManager.ActiveGameObjects)
-                    StunConsole.Write("o.ObjectName"); //
+                    StunConsole.Write(o.ObjectName); //
                 StunConsole.Write("\n");
             }
 
@@ -146,8 +146,7 @@ namespace Pearl
                 if (player != null)
                 {
                     Drawing.DrawCircle(player.WorldPosition, drawDebug, Color.yellow);
-                    Drawing.DrawCircle(player.WorldPosition, 9.5f, Color.grey);
-                    Drawing.DrawString(player.WorldPosition, "IsCasting: " + player.IsCasting, Color.gray);
+                    //Drawing.DrawString(player.WorldPosition, "IsCasting: " + player.IsCasting, Color.gray);
 
                     var enemyProjectile = GetEnemyProjectiles(11);
                     if (enemyProjectile != null)

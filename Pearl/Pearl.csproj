@@ -60,15 +60,15 @@
   <ItemGroup>
     <Reference Include="BattleRight.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=65bb327b54febf4b, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\BattleRight.Project\BattleRight.SDK\bin\Debug\BattleRight.Core.dll</HintPath>
+      <HintPath>..\..\BattleRight.Project\BattleRight.SDK\bin\Debug\BattleRight.Core.dll</HintPath>
     </Reference>
     <Reference Include="BattleRight.Sandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=17d7f475c70d8a09, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\BattleRight.Project\BattleRight.SDK\bin\Debug\BattleRight.Sandbox.dll</HintPath>
+      <HintPath>..\..\BattleRight.Project\BattleRight.SDK\bin\Debug\BattleRight.Sandbox.dll</HintPath>
     </Reference>
     <Reference Include="BattleRight.SDK, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a667324049f5f09a, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\BattleRight.Project\BattleRight.SDK\bin\Debug\BattleRight.SDK.dll</HintPath>
+      <HintPath>..\..\BattleRight.Project\BattleRight.SDK\bin\Debug\BattleRight.SDK.dll</HintPath>
     </Reference>
     <Reference Include="StunConsoleTool">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Battlerite\Battlerite_Data\Managed\StunConsoleTool.dll</HintPath>
